@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Backyard Bros | Lawn Care Richmond, VA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+    header {
+      background: #004d00; /* dark green */
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .special {
+      background: #000000; /* black */
+      color: #00ff00; /* bright green */
+      font-weight: bold;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 1.4rem;
+      letter-spacing: 1.5px;
+    }
+    section {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: #004d00;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #004d00;
+      padding-bottom: 8px;
+    }
+    ul.services {
+      list-style: none;
+      padding: 0;
+    }
+    ul.services li {
+      background: #e6ffe6;
+      margin-bottom: 12px;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #004d00;
+      box-shadow: 1px 1px 3px #ccc;
+    }
+    .contact-info {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #ccc;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #004d00;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border: 2px solid #004d00;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    form textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    form button {
+      background: #004d00;
+      color: white;
+      font-weight: 700;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      width: 100%;
+      transition: background 0.3s ease;
+    }
+    form button:hover {
+      background: #003300;
+    }
+    .why-choose {
+      background: #e6ffe6;
+      margin-top: 40px;
+      padding: 20px 15px;
+      border-radius: 8px;
+      color: #004d00;
+      font-weight: 600;
+      box-shadow: 1px 1px 5px #ccc;
+    }
+    .social {
+      text-align: center;
+      margin: 35px 0 50px;
+    }
+    .social a {
+      display: inline-block;
+      margin: 0 10px;
+      text-decoration: none;
+      color: #004d00;
+      font-weight: 700;
+      font-size: 1.3rem;
+      border: 2px solid #004d00;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .social a:hover {
+      background: #004d00;
+      color: #fff;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Backyard Bros</h1>
+    <p>Fast. Friendly. Reliable Yard Care in Richmond, VA</p>
+  </header>
+
+  <div class="special">🌿 First Cut Special — Only $40! 🌿</div>
+
+  <section>
+    <h2>Our Services</h2>
+    <ul class="services">
+      <li>Lawn Mowing (Front/Back) — $40–$70</li>
+      <li>Leaf & Trash Cleanup — $50–$100</li>
+      <li>Weed Removal — $30–$50</li>
+      <li>Bush/Hedge Trimming — $40–$70</li>
+      <li>Monthly Maintenance Plans — $120–$200</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Book Your Yard Care Today!</h2>
+    <p class="contact-info">📞 Call or Text: <strong>804-806-1070</strong></p>
+
+    <form id="contactForm" onsubmit="return handleSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="service">Service Needed:</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select Service --</option>
+        <option value="Lawn Mowing">Lawn Mowing</option>
+        <option value="Leaf & Trash Cleanup">Leaf & Trash Cleanup</option>
+        <option value="Weed Removal">Weed Removal</option>
+        <option value="Bush/Hedge Trimming">Bush/Hedge Trimming</option>
+        <option value="Monthly Maintenance Plan">Monthly Maintenance Plan</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" />
+
+      <label for="notes">Additional Notes:</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="why-choose">
+    <h2>Why Choose Backyard Bros?</h2>
+    <ul>
+      <li>Friendly & reliable local service</li>
+      <li>Affordable pricing</li>
+      <li>Flexible scheduling</li>
+      <li>Satisfaction guaranteed</li>
+    </ul>
+  </section>
+
+  <section class="social">
+    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener">Instagram</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Backyard Bros — Richmond, VA
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      // Simple form validation (already required fields)
+      const name = event.target.name.value.trim();
+      const phone = event.target.phone.value.trim();
+      const service = event.target.service.value;
+
+      if (!name || !phone || !service) {
+        alert("Please fill in all required fields.");
+        return false;
+      }
+
+      // Normally here you'd send form data to your server or email service
+      alert("Thanks for booking Backyard Bros! We'll get back to you soon.");
+
+      event.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
